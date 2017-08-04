@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD110B5B-DE55-4968-A3DE-08B91F9E7172}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChegaMaisCalouro</RootNamespace>
+    <AssemblyName>ChegaMaisCalouro</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\themes\Carrossel\bootstrap.css" />
+    <Content Include="Content\themes\Carrossel\bootstrap.min.css" />
+    <Content Include="Content\themes\close.png" />
+    <Content Include="Content\themes\lightbox.min.css" />
+    <Content Include="Content\imagens\Biologia c\A_determinação_do_sexo.jpg" />
+    <Content Include="Content\imagens\Biologia c\acidos_nucleicos.jpg" />
+    <Content Include="Content\imagens\Biologia c\algas.jpg" />
+    <Content Include="Content\imagens\Biologia c\anelidios.jpg" />
+    <Content Include="Content\imagens\Biologia c\artropodes.jpg" />
+    <Content Include="Content\imagens\Biologia c\briofilas_e_pteridofitas.jpg" />
+    <Content Include="Content\imagens\Biologia c\briofitas.jpg" />
+    <Content Include="Content\imagens\Biologia c\cadeia_teia_alimentar.jpg" />
+    <Content Include="Content\imagens\Biologia c\carboidrato.jpg" />
+    <Content Include="Content\imagens\Biologia c\carboidratos.jpg" />
+    <Content Include="Content\imagens\Biologia c\ciclos_biogeoquimicas.jpg" />
+    <Content Include="Content\imagens\Biologia c\Ciclos.jpg" />
+    <Content Include="Content\imagens\Biologia c\citologia.jpg" />
+    <Content Include="Content\imagens\Biologia c\cnidarios.jpg" />
+    <Content Include="Content\imagens\Biologia c\codigo_genetico.jpg" />
+    <Content Include="Content\imagens\Biologia c\complexo de golgi bio.jpg" />
+    <Content Include="Content\imagens\Biologia c\composiçao quimica.jpg" />
+    <Content Include="Content\imagens\Biologia c\Coração.jpg" />
+    <Content Include="Content\imagens\Biologia c\cordados.jpg" />
+    <Content Include="Content\imagens\Biologia c\Digestão humana.jpg" />
+    <Content Include="Content\imagens\Biologia c\diversidade de vida.jpg" />
+    <Content Include="Content\imagens\Biologia c\doencas por invertebrados.jpg" />
+    <Content Include="Content\imagens\Biologia c\Doenças.jpg" />
+    <Content Include="Content\imagens\Biologia c\Ecologia.jpg" />
+    <Content Include="Content\imagens\Biologia c\ecossistema.jpg" />
+    <Content Include="Content\imagens\Biologia c\equinodermas.jpg" />
+    <Content Include="Content\imagens\Biologia c\especializaçao.jpg" />
+    <Content Include="Content\imagens\Biologia c\espermatogenese.jpg" />
+    <Content Include="Content\imagens\Biologia c\estequiometria.jpg" />
+    <Content Include="Content\imagens\Biologia c\estomatos.jpg" />
+    <Content Include="Content\imagens\Biologia c\evidencias da evoluçao.jpg" />
+    <Content Include="Content\imagens\Biologia c\Evolução.jpg" />
+    <Content Include="Content\imagens\Biologia c\Fator RH.jpg" />
+    <Content Include="Content\imagens\Biologia c\Fisiologia.jpg" />
+    <Content Include="Content\imagens\Biologia c\fotossintese.jpg" />
+    <Content Include="Content\imagens\Biologia c\fruto e semente.jpg" />
+    <Content Include="Content\imagens\Biologia c\Genética.jpg" />
+    <Content Include="Content\imagens\Biologia c\Genética2.jpg" />
+    <Content Include="Content\imagens\Biologia c\gimnosperma.jpg" />
+    <Content Include="Content\imagens\Biologia c\gminosperma e angiosperma.jpg" />
+    <Content Include="Content\imagens\Biologia c\h2o.jpg" />
+    <Content Include="Content\imagens\Biologia c\Haploidismo.jpg" />
+    <Content Include="Content\imagens\Biologia c\Herança do sexo.jpg" />
+    <Content Include="Content\imagens\Biologia c\heredograma.jpg" />
+    <Content Include="Content\imagens\Biologia c\invertebrados.jpg" />
+    <Content Include="Content\imagens\Biologia c\lípidios.jpg" />
+    <Content Include="Content\imagens\Biologia c\meiose.jpg" />
+    <Content Include="Content\imagens\Biologia c\membrana plasmatica.jpg" />
+    <Content Include="Content\imagens\Biologia c\mitose.jpg" />
+    <Content Include="Content\imagens\Biologia c\molusco bio.jpg" />
+    <Content Include="Content\imagens\Biologia c\moluscos.jpg" />
+    <Content Include="Content\imagens\Biologia c\nematelmintes.jpg" />
+    <Content Include="Content\imagens\Biologia c\neodarwinismo.jpg" />
+    <Content Include="Content\imagens\Biologia c\o esqueleto dos animais.jpg" />
+    <Content Include="Content\imagens\Biologia c\organelas bio.jpg" />
+    <Content Include="Content\imagens\Biologia c\Organelas celulares.jpg" />
+    <Content Include="Content\imagens\Biologia c\organelas citoplasmatica.jpg" />
+    <Content Include="Content\imagens\Biologia c\orgaos homologos - bio.jpg" />
+    <Content Include="Content\imagens\Biologia c\origem da vida.jpg" />
+    <Content Include="Content\imagens\Biologia c\ovolugenese.jpg" />
+    <Content Include="Content\imagens\Biologia c\plantas.jpg" />
+    <Content Include="Content\imagens\Biologia c\platelmintes.jpg" />
+    <Content Include="Content\imagens\Biologia c\poriferos.jpg" />
+    <Content Include="Content\imagens\Biologia c\problemas ambientais.jpg" />
+    <Content Include="Content\imagens\Biologia c\proteina.jpg" />
+    <Content Include="Content\imagens\Biologia c\protozoarios.jpg" />
+    <Content Include="Content\imagens\Biologia c\protozooses.jpg" />
+    <Content Include="Content\imagens\Biologia c\pteridofitas.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\A_determinação_do_ sexo_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\acidos_nucleicos_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\algas_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\anelidios _r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\artropodes_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\briofilas_e_pteridofitas_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\briofitas_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\cadeia _teia_alimentar r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\carboidrato_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\carboidratos_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\ciclos_biogeoquimicas_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Ciclos_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\citologia_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\cnidarios_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\codigo_genetico_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\complexo_de_golgi_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\composiçao_quimica_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Coração_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\cordados_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Digestão_humana_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\diversidade_de_vida_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\doencas_por_invertebrados_r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Doenças r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Ecologia r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\ecossistema r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\equinodermas r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\especializaçao r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\espermatogenese r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\estequiometria r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\estomatos r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\evidencias da evoluçao r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Evolução r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Fator RH r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Fisiologia r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\fotossintese r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\fruto e semente r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Genética r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Genética2 r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\gimnosperma r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\gminosperma e angiosperma r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\h2o r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Haploidismo r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Herança do sexo r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\heredograma r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\invertebrados r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\lípidios r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\meiose r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\membrana plasmatica r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\mitose r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\molusco r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\moluscos r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\nematelmintes r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\neodarwinismo r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\o esqueleto dos animais r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Organelas celulares r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\organelas citoplasmatica r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\organelas r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\orgaos homologos r - bio.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\origem da vida r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\ovolugenese r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\plantas r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\platelmintes r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\poriferos r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\problemas ambientais r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\proteina r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\protozoarios r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\protozooses r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\pteridofitas r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Reino Fungi r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\reino monera r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\relaçoes ecologicas r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Reprodução Briófilas r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Reprodução das gimnosperma r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Reprodução das Pteridófitas r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\sais minerais r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\sintese proteica r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Sistema Circulatorio  r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Sistema dIGESTORIO r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Sistema Endocrino certo r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Sistema excretor r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\sistema locomotor r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Sistema nervoso CERTO r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Sistema Reprodutor MENININHO r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Sistema Reprodutor r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\sistema respiratorio r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\tecido conjuntivo r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\tecido epitelial r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\tecido muscular r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\tecido nervoso r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\tegumento r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Teorias evolutivas r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\tipos de digestão r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\Tipos Sanguíneos r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\vasos condutores- bio.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\viroses r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\virus r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\vitaminas r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\vitaminas2 r.jpg" />
+    <Content Include="Content\imagens\Biologia c\reduzido\zoologia r.jpg" />
+    <Content Include="Content\imagens\Biologia c\Reino Fungi.jpg" />
+    <Content Include="Content\imagens\Biologia c\reino monera.jpg" />
+    <Content Include="Content\imagens\Biologia c\relaçoes ecologicas.jpg" />
+    <Content Include="Content\imagens\Biologia c\Reprodução Briófilas.jpg" />
+    <Content Include="Content\imagens\Biologia c\Reprodução das gimnosperma.jpg" />
+    <Content Include="Content\imagens\Biologia c\Reprodução das Pteridófitas.jpg" />
+    <Content Include="Content\imagens\Biologia c\sais minerais.jpg" />
+    <Content Include="Content\imagens\Biologia c\sintese proteica.jpg" />
+    <Content Include="Content\imagens\Biologia c\Sistema Circulatorio.jpg" />
+    <Content Include="Content\imagens\Biologia c\Sistema dIGESTORIO.jpg" />
+    <Content Include="Content\imagens\Biologia c\Sistema Endocrino certo.jpg" />
+    <Content Include="Content\imagens\Biologia c\Sistema excretor.jpg" />
+    <Content Include="Content\imagens\Biologia c\sistema locomotor.jpg" />
+    <Content Include="Content\imagens\Biologia c\Sistema nervoso CERTO.jpg" />
+    <Content Include="Content\imagens\Biologia c\Sistema Reprodutor MENININHO.jpg" />
+    <Content Include="Content\imagens\Biologia c\Sistema Reprodutor.jpg" />
+    <Content Include="Content\imagens\Biologia c\sistema respiratorio.jpg" />
+    <Content Include="Content\imagens\Biologia c\tecido conjuntivo.jpg" />
+    <Content Include="Content\imagens\Biologia c\tecido epitelial.jpg" />
+    <Content Include="Content\imagens\Biologia c\tecido muscular.jpg" />
+    <Content Include="Content\imagens\Biologia c\tecido nervoso.jpg" />
+    <Content Include="Content\imagens\Biologia c\tegumento.jpg" />
+    <Content Include="Content\imagens\Biologia c\Teorias evolutivas.jpg" />
+    <Content Include="Content\imagens\Biologia c\Tipos Sanguíneos.jpg" />
+    <Content Include="Content\imagens\Biologia c\vasos condutores r.jpg" />
+    <Content Include="Content\imagens\Biologia c\viroses.jpg" />
+    <Content Include="Content\imagens\Biologia c\virus.jpg" />
+    <Content Include="Content\imagens\Biologia c\vitaminas.jpg" />
+    <Content Include="Content\imagens\Biologia c\vitaminas2.jpg" />
+    <Content Include="Content\imagens\Biologia c\zoologia.jpg" />
+    <Content Include="Content\imagens\ingles\ingles_no_enem_dicas.jpg" />
+    <Content Include="Content\imagens\ingles\phrasal_verbs.jpg" />
+    <Content Include="Content\imagens\ingles\pronomes_interrogativas.jpg" />
+    <Content Include="Content\imagens\ingles\Reduzido\inglesNoEnemDicasR.jpg" />
+    <Content Include="Content\imagens\ingles\Reduzido\InterrogativePronouns R.jpg" />
+    <Content Include="Content\imagens\ingles\Reduzido\phrasalverbs R.jpg" />
+    <Content Include="Content\imagens\ingles\Reduzido\reportedspeech R.jpg" />
+    <Content Include="Content\imagens\ingles\reported_speech.jpg" />
+    <Content Include="Content\imagens\LOGO DO OTINHA c.png" />
+    <Content Include="Content\themes\Carrossel\administracao.jpg" />
+    <Content Include="Content\themes\Carrossel\FORP.jpg" />
+    <Content Include="Content\themes\Carrossel\puc-sp-2.jpg" />
+    <Content Include="Content\themes\Carrossel\UNIP.jpg" />
+    <Content Include="Content\themes\Carrossel\usp sao carlos.jpg" />
+    <Content Include="Content\themes\loading.gif" />
+    <Content Include="Content\themes\next.png" />
+    <Content Include="Content\themes\prev.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\ChateaudeGarage.ttf" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\lightbox.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Biologia.cshtml" />
+    <Content Include="Views\Home\Espanhol.cshtml" />
+    <Content Include="Views\Home\Faculdades.cshtml" />
+    <Content Include="Views\Home\Filosofia.cshtml" />
+    <Content Include="Views\Home\Física.cshtml" />
+    <Content Include="Views\Home\Geografia.cshtml" />
+    <Content Include="Views\Home\Guia.cshtml" />
+    <Content Include="Views\Home\História.cshtml" />
+    <Content Include="Views\Home\Ingles.cshtml" />
+    <Content Include="Views\Home\Inicio.cshtml" />
+    <Content Include="Views\Home\Literatura.cshtml" />
+    <Content Include="Views\Home\Matemática.cshtml" />
+    <Content Include="Views\Home\Português.cshtml" />
+    <Content Include="Views\Home\Química.cshtml" />
+    <Content Include="Views\Home\Sobre.cshtml" />
+    <Content Include="Views\Home\Sociologia.cshtml" />
+    <Content Include="Views\Home\Vestibulares.cshtml" />
+    <Content Include="Views\Home\_Layout.cshtml" />
+    <Content Include="Scripts\lightbox.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51165</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51165/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

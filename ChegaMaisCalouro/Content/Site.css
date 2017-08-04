@@ -1,0 +1,166 @@
+﻿body {
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+    padding:0px;
+    margin:0px;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.logo 
+{
+    width:150px;
+}
+
+.cabecalho
+{
+    width:100%;
+    background-color:#49c6c0;
+    height:120px;
+}
+
+.cabecalho1
+{
+    width:25%;
+    background-color:#49c6c0;
+    float:left;
+    position:relative;
+    height:100px;
+}
+
+.cabecalho2
+{
+    width:75%;
+    height:100px;
+    float:left;
+    position:relative;
+    font-size:15px;
+    color:#747a7c;
+    font-family: 'ChateaudeGarage';
+}
+
+#menu ul {
+	padding:0px;
+	margin:0px;
+	list-style:none;
+}
+
+#menu ul li { display: inline; font-size:25px;}
+
+#menu ul li a {
+	padding: 40px 30px;
+	display: inline-block;
+	text-decoration: none;
+	color:#747a7c;
+}
+
+#menu ul li a:hover {
+	color: White;
+}
+
+#menu ul li ul {
+    position:relative; 
+    top:-30px;
+    display:none;
+    background-color:#49c6c0;
+    width:250px;
+    left:100%;
+    margin-left: -390px;
+    z-index:99999;
+}
+
+#menu ul li ul li a {
+    padding: 5px 20px 5px 20px;
+    text-decoration: none;
+    color:#747a7c;
+}
+
+#menu ul li ul li a: hover {
+	color: White;
+}
+    
+
+#menu li:hover ul, .menu li.over ul{ display:block; }
+
+#menu li ul li{
+    display:block; 
+    width:150px;
+}
+
+@font-face {
+    font-family: "ChateaudeGarage";
+    src: url("ChateaudeGarage.ttf") format("truetype");
+}
+
+
+#carrossel{
+    margin: 0px;
+    background-color:#16223a;
+    width: 100%;
+}
+.carousel-inner{ 
+    padding:0px;
+    margin:0px;
+}
+
+.margin{
+    padding:15px;
+    margin: div {margin: 10px 4px 4px 10px};
+ }
+
+.padrao {
+    width:60%;
+}
